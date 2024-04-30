@@ -22,7 +22,5 @@ namespace Talabat.Core.Specifications.Product_Specs
 
         public string? Search { get; set; }
 
-
-
     }
 }
