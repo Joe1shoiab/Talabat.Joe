@@ -11,6 +11,8 @@ namespace Talabat.APIs.Extentions
         {
             // To Allow Dependence Injection for GenericRepository
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            services.AddScoped<IBasketRepository, BasketRepository>();
             // To Allow Dependence Injection for Mapper
             services.AddAutoMapper(typeof(MappingProfiles));
             return services;
