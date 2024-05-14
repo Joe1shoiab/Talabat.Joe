@@ -25,5 +25,6 @@
         public string ZipCode { get; set; }
 
         public string AppUserId { get; set; } // this is the foreign key
+        public AppUser AppUser { get; set; }
     }
 }

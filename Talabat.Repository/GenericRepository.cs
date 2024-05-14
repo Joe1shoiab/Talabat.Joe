@@ -27,7 +27,7 @@ namespace Talabat.Repository
         {
             return await _dbContext.Set<T>().FindAsync(id);
         }
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IReadOnlyList<T>> GetAllAsync()
         {
             return await _dbContext.Set<T>().ToListAsync();   
         }
@@ -54,5 +54,12 @@ namespace Talabat.Repository
         {
             return ApplySpecifications(spec).CountAsync();
         }
+
+        public async Task AddAsync(T entity)
+        {
+            await  _dbContext.Set<T>().AddAsync(entity);
+        }
+
+       
     }
 }

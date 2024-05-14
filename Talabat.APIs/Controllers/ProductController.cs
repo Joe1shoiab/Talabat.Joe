@@ -26,7 +26,7 @@ namespace Talabat.APIs.Controllers
             _mapper = mapper;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetAll([FromQuery] ProductSpecParams productSpecParams) //[FromQuery] to get the parameters from the query string
         {
