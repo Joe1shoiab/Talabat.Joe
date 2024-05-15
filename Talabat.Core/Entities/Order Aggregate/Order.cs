@@ -29,6 +29,7 @@ namespace Talabat.Core.Entities.Order_Aggregate
         public DeliveryMethod DeliveryMethod { get; set; }
         public decimal Subtotal { get; set; }
         public OrderStatus Status { get; } = OrderStatus.Pending;
+        public string PaymentIntentId { get; set; } = string.Empty;// for stripe payment intent id
         public decimal GetTotal()
         {
             return Subtotal + DeliveryMethod.Cost;

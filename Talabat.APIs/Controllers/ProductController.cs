@@ -14,6 +14,7 @@ namespace Talabat.APIs.Controllers
 {
     public class ProductController : BaseApiController
     {
+        // refactor and use unit of work 
         private readonly IGenericRepository<Product> _productRepository;
         private readonly IGenericRepository<ProductBrand> _productBrandRepository;
         private readonly IGenericRepository<ProductCategory> _productCategoriesRepository;
